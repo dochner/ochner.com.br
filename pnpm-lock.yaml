@@ -54,6 +54,7 @@ specifiers:
   vite-plugin-pwa: ^0.11.6
   vite-ssg: ^0.16.1
   vue: ^3.2.22
+  vue-gtag-next: ^1.14.0
   vue-router: ^4.0.12
   vue-tsc: ^0.29.5
 
@@ -65,6 +66,7 @@ dependencies:
   nprogress: 0.2.0
   prism-theme-vars: 0.2.2
   vue: 3.2.22
+  vue-gtag-next: 1.14.0_vue@3.2.22
   vue-router: 4.0.12_vue@3.2.22
 
 devDependencies:
@@ -6994,6 +6996,14 @@ packages:
     transitivePeerDependencies:
       - supports-color
     dev: true
+
+  /vue-gtag-next/1.14.0_vue@3.2.22:
+    resolution: {integrity: sha512-iJl+cOG2GU5NuxqzSSIpt03WVOvZqyKB9TOy7d55KiuvRklcnb2nlqxW5B/a3/sbIt7fla+XEkRyMCcoz0zAHw==}
+    peerDependencies:
+      vue: ^3.0.0-rc.11
+    dependencies:
+      vue: 3.2.22
+    dev: false
 
   /vue-router/4.0.12_vue@3.2.22:
     resolution: {integrity: sha512-CPXvfqe+mZLB1kBWssssTiWg4EQERyqJZes7USiqfW9B5N2x+nHlnsM1D3b5CaJ6qgCvMmYJnz+G0iWjNCvXrg==}

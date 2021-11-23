@@ -3,16 +3,18 @@
     "selected": 1
   },
   "1 error pnpm": {
-    "errno": 1,
     "code": "ELIFECYCLE",
+    "errno": "ENOENT",
+    "syscall": "spawn",
+    "file": "sh",
     "pkgid": "@",
     "stage": "dev",
     "script": "vite --port 3333",
     "err": {
       "name": "pnpm",
-      "message": "@ dev: `vite --port 3333`\nExit status 1",
+      "message": "@ dev: `vite --port 3333`\nspawn ENOENT",
       "code": "ELIFECYCLE",
-      "stack": "pnpm: @ dev: `vite --port 3333`\nExit status 1\n    at EventEmitter.<anonymous> (C:\\Users\\dougl\\AppData\\Roaming\\npm\\node_modules\\pnpm\\dist\\pnpm.cjs:104889:20)\n    at EventEmitter.emit (events.js:400:28)\n    at ChildProcess.<anonymous> (C:\\Users\\dougl\\AppData\\Roaming\\npm\\node_modules\\pnpm\\dist\\pnpm.cjs:92878:18)\n    at ChildProcess.emit (events.js:400:28)\n    at maybeClose (internal/child_process.js:1055:16)\n    at Process.ChildProcess._handle.onexit (internal/child_process.js:288:5)"
+      "stack": "pnpm: @ dev: `vite --port 3333`\nspawn ENOENT\n    at ChildProcess.<anonymous> (/home/douglas/.nvm/versions/node/v14.17.6/pnpm-global/5/node_modules/.pnpm/pnpm@6.22.1/node_modules/pnpm/dist/pnpm.cjs:91330:22)\n    at ChildProcess.emit (events.js:400:28)\n    at maybeClose (internal/child_process.js:1055:16)\n    at Process.ChildProcess._handle.onexit (internal/child_process.js:288:5)"
     }
   },
   "2 warn pnpm:global": " Local package.json exists, but node_modules missing, did you mean to install?"
