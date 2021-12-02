@@ -17,6 +17,7 @@ import markdownLinkAttr from 'markdown-it-link-attributes'
 import markdownAttrs from 'markdown-it-attrs'
 import Unocss from 'unocss/vite'
 import { presetAttributify, presetUno, presetIcons } from 'unocss'
+import VueI18n from '@intlify/vite-plugin-vue-i18n'
 import { slugify } from './scripts/slugify'
 import { codeBlockFilename, lazyLoadImage, prose } from './scripts/markdown'
 import { buildBlogRSS } from './scripts/rss'
@@ -128,6 +129,13 @@ export default defineConfig({
       },
     }),
 
+    // https://github.com/intlify/bundle-tools/tree/main/packages/vite-plugin-vue-i18n
+    VueI18n({
+      runtimeOnly: true,
+      compositionOnly: true,
+      include: [resolve(__dirname, 'locales/**')],
+    }),
+
     Unocss({
       theme: {
         fontFamily: {
@@ -148,10 +156,11 @@ export default defineConfig({
 
     AutoImport({
       imports: [
-        'vue',
-        'vue-router',
         '@vueuse/core',
         '@vueuse/head',
+        'vue',
+        'vue-router',
+        'vue-i18n',
       ],
       dts: 'src/auto-imports.d.ts',
     }),
@@ -173,6 +182,7 @@ export default defineConfig({
 
     Inspect(),
   ],
+
   ssgOptions: {
     formatting: 'minify',
     async onFinished() {

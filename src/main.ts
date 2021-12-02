@@ -8,9 +8,8 @@ import routes from 'virtual:generated-pages'
 import { ViteSSG } from 'vite-ssg'
 import dayjs from 'dayjs'
 import LocalizedFormat from 'dayjs/plugin/localizedFormat'
-import App from './App.vue'
-
 import type { RouterScrollBehavior } from 'vue-router'
+import App from './App.vue'
 
 if (import.meta.env.DEV)
   // eslint-disable-next-line no-console
@@ -23,7 +22,8 @@ const scrollBehavior: RouterScrollBehavior = (to, from, savedPosition) => {
       top: 120,
       behavior: 'smooth',
     }
-  } else {
+  }
+  else {
     if (savedPosition)
       return savedPosition
     else

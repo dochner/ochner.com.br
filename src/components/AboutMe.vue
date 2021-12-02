@@ -1,3 +1,8 @@
+<script setup lang="ts">
+
+const { t } = useI18n()
+</script>
+
 <template>
   <div class="flex flex-col md:flex-row items-center pt-4 mb-12">
     <div class="relative w-45 h-45 rounded-full overflow-hidden flex-shrink-0 md:mr-10 lt-md:mb-10">
@@ -11,6 +16,10 @@
         Front-end Engineer w/ Focus on Vue and Vite .<br>
         <a href="https://www.linkedin.com/company/multiplieroficial" class="font-semibold">@multiplier</a> team member.
       </p>
+      <br>
+      <div>
+        {{ t('greetings') }}
+      </div>
     </div>
   </div>
 </template>
