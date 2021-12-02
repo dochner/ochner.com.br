@@ -5,7 +5,7 @@ useHead({
   title: 'Douglas Ochner',
   meta: [
     { property: 'og:title', content: 'Douglas Ochner' },
-    { property: 'og:image', content: 'https://ochner.com.br/avatar.png' },
+    { property: 'og:image', content: 'https://ochner.com.br/avatar.webp' },
     { property: 'og:type', content: 'website' },
     { name: 'description', content: 'Douglas Ochner\'s Portfolio' },
     { name: 'twitter:card', content: 'summary_large_image' },

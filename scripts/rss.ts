@@ -64,7 +64,7 @@ export async function buildBlogRSS() {
 
 async function writeFeed(name: string, options: FeedOptions, items: Item[]) {
   options.author = AUTHOR
-  options.image = 'https://ochner.com.br/avatar.png'
+  options.image = 'https://ochner.com.br/avatar.webp'
   options.favicon = 'https://ochner.com.br/logo.png'
 
   const feed = new Feed(options)
