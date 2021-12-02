@@ -1,0 +1,12 @@
+greetings: |
+        ··Several lines of text,\n
+        ··with some "quotes" of various 'types',\n
+        ··and also a blank line:\n
+        ··\n
+        ··plus another line at the end.\n
+# ¡Y ahí! Soy Douglas, el chico de la foto de arriba, actualmente vivo en Jaraguá do Sul, Santa Catarina, Brasil.
+# Comencé a codificar hace 1 año, trabajando a tiempo completo en @multiplierficial con PHP y Laravel en el backend y NuxtJs con Vuetify en el frontend, cambiando mi enfoque al desarrollo de frontend, luego pasando a Vue 3 con Vite y usando Quasar como marco para UI, además de WindiCSS.
+# Paralelamente, continué realizando algunos proyectos freelance para adquirir conocimientos en el área y crear una red con grandes profesionales del área
+# Tengo una amplia gama de intereses como Linux, IoT, jugar a Xbox, BBQ, ¡y me encanta crear cosas!
+
+message: Mesage
