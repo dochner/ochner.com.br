@@ -1,5 +1,5 @@
 {
-  "extends": ["@hannoeru"],
+  "extends": ["@antfu/eslint-config"],
   "overrides": [
     {
       "files": ["**/*.md"],

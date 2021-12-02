@@ -6,10 +6,10 @@ import MarkdownIt from 'markdown-it'
 import { Feed, FeedOptions, Item } from 'feed'
 import { codeBlockFilename } from './markdown'
 
-const DOMAIN = 'https://hannoeru.me'
+const DOMAIN = 'https://ochner.com.br'
 const AUTHOR = {
-  name: 'Han',
-  email: 'me@hanlee.co',
+  name: 'Douglas',
+  email: 'douglas.ochner@gmail.com',
   link: DOMAIN,
 }
 const markdown = MarkdownIt({
@@ -64,8 +64,8 @@ export async function buildBlogRSS() {
 
 async function writeFeed(name: string, options: FeedOptions, items: Item[]) {
   options.author = AUTHOR
-  options.image = 'https://hannoeru.me/avatar.png'
-  options.favicon = 'https://hannoeru.me/logo.png'
+  options.image = 'https://ochner.com.br/avatar.png'
+  options.favicon = 'https://ochner.com.br/logo.png'
 
   const feed = new Feed(options)
 
