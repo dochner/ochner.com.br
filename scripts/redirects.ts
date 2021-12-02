@@ -7,7 +7,7 @@ async function run() {
 
   const { data: repos } = await gh.repos.listForUser({
     type: 'owner',
-    username: 'hannoeru',
+    username: 'dochner',
     per_page: 100,
   })
 

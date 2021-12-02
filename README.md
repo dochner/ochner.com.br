@@ -1,8 +1,8 @@
-**[hannoeru.me](https://hannoeru.me)**
+**[ochner.com.br](ochner.com.br)**
 
 my personal website powered by [Vite](https://vitejs.dev/)
 
-this is a fork from [antfu.me](https://github.com/antfu/antfu.me)
+this is a fork from [hannoeru.me](https://github.com/hannoeru/hannoeru.me)
 
 <br>
 

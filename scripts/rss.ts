@@ -24,11 +24,11 @@ export async function buildBlogRSS() {
   const files = await fg('posts/*.md')
 
   const options = {
-    title: 'Han',
-    description: 'Han\' Blog',
+    title: 'Ochner',
+    description: 'Ochner\'s Blog',
     id: `${DOMAIN}/`,
     link: `${DOMAIN}/`,
-    copyright: 'CC BY-NC-SA 4.0 2021 © Han',
+    copyright: 'CC BY-NC-SA 4.0 2021 © Douglas Ochner',
     feedLinks: {
       json: `${DOMAIN}/feed.json`,
       atom: `${DOMAIN}/feed.atom`,

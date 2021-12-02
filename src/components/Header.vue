@@ -12,7 +12,7 @@
         to="/"
         focusable="false"
       >
-        OCHNER
+        Ochner
       </router-link>
       <nav class="nav">
         <router-link to="/posts" title="Posts">
