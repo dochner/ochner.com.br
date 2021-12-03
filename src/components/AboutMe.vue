@@ -13,8 +13,9 @@ const { t } = useI18n()
         Douglas Ochner
       </h1>
       <p class="leading-[1.75]">
-        Front-end Engineer w/ Focus on Vue and Vite .<br>
-        <a href="https://www.linkedin.com/company/multiplieroficial" class="font-semibold">@multiplier</a> team member.
+        {{ t('who-am-i') }}
+        <br>
+        <a href="https://www.linkedin.com/company/multiplieroficial" class="font-semibold" rel="noopener">@multiplier</a> team member.
       </p>
       <br>
       <div>
