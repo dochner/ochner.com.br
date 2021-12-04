@@ -1,5 +1,5 @@
 greetings: |
-  Hi i'm Douglas, the guy in the picture above.
+  Hi i'm Douglas, the guy in the picture.
   I currently live in Jaraguá do sul, Santa Catarina, Brazil 🇧🇷
   Started coding one year ago, with PHP and Laravel in the backend 
   and NuxtJs with Vuetify in the frontend, 
@@ -9,11 +9,5 @@ greetings: |
   In parallel with, I continued doing some freelance projects 
   to acquire knowledge in the area and create a network with awesome professionals.
 
-# Hi, i'm Douglas, the guy in the picture above, I currently live in Jaraguá do Sul, Santa Catarina, Brazil.\n
-# I started coding 1 year ago, working full time at @multiplierficial with PHP and Laravel in the backend and NuxtJs with Vuetify in the frontend, shifting my focus to frontend development, then moving on to Vue 3 with Vite and using Quasar as a Framework for UI, in addition to WindiCSS\n
-# In parallel with, I continued doing some freelance projects to acquire knowledge in the area and create a network with great professionals in the area.\n
-# I have a wide range of interests like Linux, IoT, playing Xbox, BBQ, and I love creating stuff!\n
-
 who-am-i: Front-end Engineer with Focus on Vue and Vite.
-
 message: Message
