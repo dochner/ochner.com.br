@@ -19,15 +19,15 @@ const { t } = useI18n()
         ochner
       </router-link>
       <nav class="nav">
-        <router-link to="/posts" title="Posts">
+        <router-link to="/posts" title="Posts" class="umami--click--blog-button">
           <span class="lt-md:hidden">Blog</span>
           <ri-article-line class="md:hidden" />
         </router-link>
-        <router-link to="/bookmarks" title="Bookmarks">
+        <router-link to="/bookmarks" title="Bookmarks" class="umami--click--bookmarks-button">
           <span class="lt-md:hidden">{{ t('bookmarks')}}</span>
           <ri-bookmark-line class="md:hidden" />
         </router-link>
-        <a href="https://github.com/dochner" target="_blank" rel="noopener" title="GitHub">
+        <a href="https://github.com/dochner" class="umami--click--github-button" target="_blank" rel="noopener" title="GitHub">
           <uil-github-alt />
         </a>
         <!-- <a href="/feed.xml" target="_blank" title="RSS" class="lt-md:hidden">
