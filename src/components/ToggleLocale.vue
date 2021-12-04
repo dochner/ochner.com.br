@@ -22,7 +22,7 @@ console.log(availableLocales)
   position: relative;
 }
 
- a,  .d-translate-btn {
+.d-translate-btn {
   cursor: pointer;
   text-decoration: none;
   color: inherit;
