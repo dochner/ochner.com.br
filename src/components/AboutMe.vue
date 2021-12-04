@@ -22,6 +22,9 @@ const { t } = useI18n()
   <Intro />
   <hr class="text-gray-300 mx-45 my-4" />
   <p>
-   {{ t('find-me') }}  <a href="https://github.com/dochner" class="px-0">Github</a>, <a href="https://www.linkedin.in/douglasochner" class="px-0">Linkedin</a>, {{ t('mail-me')}} <a href="mailto:douglasochner@gmail.com" class="px-0">douglas.ochner@gmail.com</a>.
+   {{ t('find-me') }} 
+   <a href="https://github.com/dochner" rel="noopener" target="_blank" class="px-0">Github</a>, 
+   <a href="https://www.linkedin.com/in/douglasochner" target="_blank" rel="noopener" class="px-0">Linkedin</a>,
+   {{ t('mail-me')}} <a href="mailto:douglasochner@gmail.com" target="_blank" rel="noopener" class="px-0">douglas.ochner@gmail.com</a>.
   </p>
 </template>
