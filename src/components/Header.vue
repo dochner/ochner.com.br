@@ -1,3 +1,7 @@
+<script setup lang="ts">
+const { t } = useI18n()
+</script>
+
 <template>
   <header
     class="
@@ -12,7 +16,7 @@
         to="/"
         focusable="false"
       >
-        Ochner
+        ochner
       </router-link>
       <nav class="nav">
         <router-link to="/posts" title="Posts">
@@ -20,7 +24,7 @@
           <ri-article-line class="md:hidden" />
         </router-link>
         <router-link to="/bookmarks" title="Bookmarks">
-          <span class="lt-md:hidden">Bookmarks</span>
+          <span class="lt-md:hidden">{{ t('bookmarks')}}</span>
           <ri-bookmark-line class="md:hidden" />
         </router-link>
         <a href="https://github.com/dochner" target="_blank" rel="noopener" title="GitHub">
@@ -29,6 +33,7 @@
         <!-- <a href="/feed.xml" target="_blank" title="RSS" class="lt-md:hidden">
           <la-rss-square style="font-size:1.25rem;" />
         </a> -->
+        <ToggleLocale />
         <ToggleTheme />
       </nav>
     </div>
@@ -60,7 +65,6 @@
   opacity: 1;
   text-decoration-color: inherit;
 }
-
 .backdrop-blur {
   backdrop-filter: blur(8px);
 }

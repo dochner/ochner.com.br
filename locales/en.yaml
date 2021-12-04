@@ -1,6 +1,6 @@
-greetings: |
-  Hi i'm Douglas, the guy in the picture.
-  I currently live in Jaraguá do sul, Santa Catarina, Brazil 🇧🇷
+greetings: Hi i'm Douglas, the guy in the picture.
+address: I currently live in Jaraguá do sul, Santa Catarina, Brazil
+message: |
   Started coding one year ago, with PHP and Laravel in the backend 
   and NuxtJs with Vuetify in the frontend, 
   shifting my focus to frontend development, 
@@ -9,5 +9,10 @@ greetings: |
   In parallel with, I continued doing some freelance projects 
   to acquire knowledge in the area and create a network with awesome professionals.
 
+en: English
+es: Espanõl
+pt-BR: Português - Brasil
 who-am-i: Front-end Engineer with Focus on Vue and Vite.
-message: Message
+find-me: Find me on
+mail-me: or mail me at
+bookmarks: Bookmarks

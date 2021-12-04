@@ -1,18 +1,21 @@
-greetings: |
-  Olá, sou Douglas, o cara da foto acima.
-  Atualmente moro em Jaraguá do sul, Santa Catarina, Brasil 🇧🇷
+greetings: Olá, sou Douglas, o cara da foto.
+address: Atualmente moro em Jaraguá do sul, Santa Catarina, Brasil
+message: |
   Comecei a programar há um ano, com PHP e Laravel no backend
   e NuxtJs com Vuetify no frontend,
   mudando meu foco para o desenvolvimento de front-end,
-  e assim mudando para Vue 3 com Vite
+  e assim consequentemente mudando minhas ferramentas para para Vue 3 com Vite
   e usando Quasar como um framework de interface do usuário, com WindiCSS também.
   Paralelamente, continuei fazendo alguns projetos freelance
   adquirir conhecimentos na área e criar uma rede de profissionais de ponta.
-# Eai! sou o Douglas, o cara da foto ali encima, atualmente moro em Jaraguá do Sul, Santa Catarina, Brasil.
-# Comecei a programar há 1 ano, trabalhando em tempo integral na @multiplierficial com PHP e Laravel no backend e NuxtJs com Vuetify no frontend, mudando meu foco para o desenvolvimento frontend, seguindo então com Vue 3 com Vite e utilizando Quasar como Framework para UI, além de WindiCSS
-# Em parelo com segui fazendo alguns projetos freelance para adquirir conhecimento na área e criar um network com grandes profissionais da área.
-# Tenho uma ampla gama de interesses, como Linux, IoT, jogar Xbox, churrasco, e adoro criar coisas!"
 
 who-am-i: Desenvolvedor front-end com foco em Vue e Vite.
 
-message: Mensagem
+en: English
+es: Espanõl
+pt-BR: Português - Brasil
+
+bookmarks: Favoritos
+
+find-me: Me encontre em
+mail-me: ou envie um e-mail
