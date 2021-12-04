@@ -17,6 +17,7 @@ const { t } = useI18n()
         <br>
         <a href="https://www.linkedin.com/company/multiplieroficial" class="font-semibold px-0" rel="noopener">@multiplier</a> team member.
       </p>
+      <p>Jaraguá do sul, Santa Catarina, Brasil</p>
     </div>
   </div>
   <Intro />
