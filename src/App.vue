@@ -12,7 +12,7 @@ useHead({
     { property: 'og:description', content: ''},
   ],
   htmlAttrs: {
-    prefix: 'og: http://ogp.me/ns#',
+    prefix: 'og: https://ogp.me/ns/website#',
   },
 })
 
