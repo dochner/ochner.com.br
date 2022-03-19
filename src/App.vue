@@ -4,12 +4,12 @@ import { useHead } from '@vueuse/head'
 useHead({
   title: 'Douglas Ochner',
   meta: [
+    { name: 'description', content: 'I love develop websites and create amazing things' },
     { property: 'og:title', content: 'Douglas Ochner' },
-    { property: 'og:image', content: 'https://ochner.com.br/avatar.webp' },
+    { property: 'og:image', content: 'https://www.ochner.com.br/thumbnail.png' },
     { property: 'og:type', content: 'website' },
-    { name: 'description', content: 'Douglas Ochner\'s Portfolio' },
-    { name: 'twitter:card', content: 'summary_large_image' },
-    { name: 'twitter:creator', content: '@dochner' },
+    { property: 'og:url', content: 'https://www.ochner.com.br/'},
+    { property: 'og:description', content: ''},
   ],
   htmlAttrs: {
     prefix: 'og: http://ogp.me/ns#',
