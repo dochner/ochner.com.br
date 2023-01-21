@@ -1,9 +1,0 @@
-{
-  "extends": ["@antfu/eslint-config"],
-  "overrides": [
-    {
-      "files": ["**/*.md"],
-      "extends": ["plugin:mdx/recommended"]
-    }
-  ]
-}
