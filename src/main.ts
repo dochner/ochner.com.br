@@ -1,32 +1,24 @@
-import { createApp } from 'vue'
+import { ViteSSG } from 'vite-ssg'
 import { setupLayouts } from 'virtual:generated-layouts'
-import { createMemoryHistory, createRouter } from 'vue-router'
-import generatedRoutes from 'virtual:generated-pages'
+import Previewer from 'virtual:vue-component-preview'
 import App from './App.vue'
 import type { UserModule } from './types'
+import generatedRoutes from '~pages'
 
 import '@unocss/reset/tailwind.css'
-import './styles/index.css'
+import './styles/main.css'
 import 'uno.css'
 
 const routes = setupLayouts(generatedRoutes)
 
-const router = createRouter({
-  history: createMemoryHistory(import.meta.env.BASE_URL),
-  routes,
-})
-
-const app = createApp(App)
-app.use(router)
-
-console.log('oroutes: ', routes)
-
-const ctx = {
-  app,
-  router,
-}
-
-await Object.values(import.meta.glob<{ install: UserModule }>('./plugins/*.ts', { eager: true }))
-  .forEach(i => i.install?.(ctx))
-
-app.mount('#app')
+// https://github.com/antfu/vite-ssg
+export const createApp = ViteSSG(
+  App,
+  { routes, base: import.meta.env.BASE_URL },
+  (ctx) => {
+    // install all modules under `modules/`
+    Object.values(import.meta.glob<{ install: UserModule }>('./modules/*.ts', { eager: true }))
+      .forEach(i => i.install?.(ctx))
+    ctx.app.use(Previewer)
+  },
+)

@@ -1,12 +1,14 @@
 import path from 'node:path'
 import { defineConfig } from 'vite'
-// import Preview from 'vite-plugin-vue-component-preview'
+import Preview from 'vite-plugin-vue-component-preview'
 import Vue from '@vitejs/plugin-vue'
 import Pages from 'vite-plugin-pages'
+import generateSitemap from 'vite-ssg-sitemap'
 import Layouts from 'vite-plugin-vue-layouts'
 import Components from 'unplugin-vue-components/vite'
 import AutoImport from 'unplugin-auto-import/vite'
 import Markdown from 'vite-plugin-vue-markdown'
+import { VitePWA } from 'vite-plugin-pwa'
 import VueI18n from '@intlify/unplugin-vue-i18n/vite'
 import Inspect from 'vite-plugin-inspect'
 import Inspector from 'vite-plugin-vue-inspector'
@@ -15,15 +17,16 @@ import Unocss from 'unocss/vite'
 import Shiki from 'markdown-it-shiki'
 import VueMacros from 'unplugin-vue-macros/vite'
 
-// https://vitejs.dev/config/
 export default defineConfig({
   resolve: {
     alias: {
-      '~': path.resolve(__dirname, 'src'),
+      '~/': `${path.resolve(__dirname, 'src')}/`,
     },
   },
 
   plugins: [
+    Preview(),
+
     VueMacros({
       plugins: {
         vue: Vue({
@@ -33,13 +36,13 @@ export default defineConfig({
       },
     }),
 
-    // https://github.com/JohnCampionJr/vite-plugin-vue-layouts
-    Layouts(),
-
     // https://github.com/hannoeru/vite-plugin-pages
     Pages({
       extensions: ['vue', 'md'],
     }),
+
+    // https://github.com/JohnCampionJr/vite-plugin-vue-layouts
+    Layouts(),
 
     // https://github.com/antfu/unplugin-auto-import
     AutoImport({
@@ -54,6 +57,7 @@ export default defineConfig({
       dts: 'src/auto-imports.d.ts',
       dirs: [
         'src/composables',
+        'src/stores',
       ],
       vueTemplate: true,
     }),
@@ -93,6 +97,35 @@ export default defineConfig({
       },
     }),
 
+    // https://github.com/antfu/vite-plugin-pwa
+    VitePWA({
+      registerType: 'autoUpdate',
+      includeAssets: ['favicon.svg', 'safari-pinned-tab.svg'],
+      manifest: {
+        name: 'Douglas Ochner',
+        short_name: 'Douglas Ochner Website',
+        theme_color: '#ffffff',
+        icons: [
+          {
+            src: '/pwa-192x192.png',
+            sizes: '192x192',
+            type: 'image/png',
+          },
+          {
+            src: '/pwa-512x512.png',
+            sizes: '512x512',
+            type: 'image/png',
+          },
+          {
+            src: '/pwa-512x512.png',
+            sizes: '512x512',
+            type: 'image/png',
+            purpose: 'any maskable',
+          },
+        ],
+      },
+    }),
+
     // https://github.com/intlify/bundle-tools/tree/main/packages/unplugin-vue-i18n
     VueI18n({
       runtimeOnly: true,
@@ -118,5 +151,17 @@ export default defineConfig({
     deps: {
       inline: ['@vue', '@vueuse', 'vue-demi'],
     },
+  },
+
+  // https://github.com/antfu/vite-ssg
+  ssgOptions: {
+    script: 'async',
+    formatting: 'minify',
+    onFinished() { generateSitemap() },
+  },
+
+  ssr: {
+    // TODO: workaround until they support native ESM
+    noExternal: ['workbox-window', /vue-i18n/],
   },
 })
