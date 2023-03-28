@@ -5,15 +5,10 @@
   "packageManager": "pnpm@7.25.0",
   "type": "module",
   "scripts": {
+    "build": "cross-env NODE_ENV=production vite-ssg build && esno ./scripts/rss.ts",
     "dev": "vite --port 3333 --open",
-    "lint": "eslint .",
     "preview": "vite preview",
-    "preview-https": "serve dist",
-    "test": "vitest",
-    "test:e2e": "cypress open",
-    "test:unit": "vitest",
-    "typecheck": "vue-tsc --noEmit",
-    "sizecheck": "npx vite-bundle-visualizer"
+    "lint": "eslint . --ext .vue,.ts,.html --fix"
   },
   "dependencies": {
     "@headlessui/vue": "^1.7.12",
@@ -22,7 +17,6 @@
     "@vueuse/head": "^1.0.22",
     "dayjs": "^1.11.7",
     "nprogress": "^0.2.0",
-    "pinia": "^2.0.29",
     "vue": "^3.2.45",
     "vue-demi": "^0.13.11",
     "vue-i18n": "^9.2.2",
@@ -76,7 +70,6 @@
     "vite": "^4.0.4",
     "vite-plugin-inspect": "^0.7.14",
     "vite-plugin-pages": "^0.28.0",
-    "vite-plugin-pwa": "^0.14.1",
     "vite-plugin-vue-component-preview": "^0.3.4",
     "vite-plugin-vue-inspector": "^3.2.1",
     "vite-plugin-vue-layouts": "^0.7.0",
