@@ -42,7 +42,7 @@ specifiers:
   markdown-it-table-of-contents: ^0.6.0
   nprogress: ^0.2.0
   pinia: ^2.0.29
-  pnpm: ^7.25.1
+  pnpm: 7.25.0
   rimraf: ^4.4.1
   sharp: ^0.32.0
   shiki: ^0.12.1
@@ -72,7 +72,6 @@ specifiers:
 dependencies:
   '@headlessui/vue': 1.7.12_vue@3.2.47
   '@heroicons/vue': 2.0.16_vue@3.2.47
-  '@unocss/reset': 0.48.5
   '@vueuse/core': 9.13.0_vue@3.2.47
   '@vueuse/head': 1.1.23_vue@3.2.47
   dayjs: 1.11.7
@@ -96,6 +95,7 @@ devDependencies:
   '@types/markdown-it-link-attributes': 3.0.1
   '@types/nprogress': 0.2.0
   '@types/sharp': 0.31.1
+  '@unocss/reset': 0.48.5
   '@vitejs/plugin-vue': 4.1.0_vite@4.2.1+vue@3.2.47
   '@vue-macros/volar': 0.5.15_vue-tsc@1.2.0+vue@3.2.47
   '@vue/test-utils': 2.3.2_vue@3.2.47
@@ -117,7 +117,7 @@ devDependencies:
   markdown-it-link-attributes: 4.0.1
   markdown-it-shiki: 0.7.2
   markdown-it-table-of-contents: 0.6.0
-  pnpm: 7.30.5
+  pnpm: 7.25.0
   rimraf: 4.4.1
   sharp: 0.32.0
   shiki: 0.12.1
@@ -2780,6 +2780,7 @@ packages:
 
   /@unocss/reset/0.48.5:
     resolution: {integrity: sha512-+JJT3Btj1oNX4XwKBDPRUYre3NYBNmi0PsC3tqkHN2VphJG0iZl91XNfsveLz8pVpDJPUDdLH4xsqh52WmxU1g==}
+    dev: true
 
   /@unocss/scope/0.48.5:
     resolution: {integrity: sha512-2xPJWUyDUnJkn37n6+a0t4vKb8l07UeGTHM4jxOvKdML4Gi5tsxulyj+lBPP+wLWu9fNiFe7HlEejbh/J13QVw==}
@@ -7677,8 +7678,8 @@ packages:
     engines: {node: '>=4'}
     dev: true
 
-  /pnpm/7.30.5:
-    resolution: {integrity: sha512-kXiH7+iGhDcm3UVhjb4pzbRYljoT2KVR8WFL37b+c15F9CuaLau0RTozrXx/9snf1JEmGICjRnMM2XArmM01sg==}
+  /pnpm/7.25.0:
+    resolution: {integrity: sha512-FGFQUON8kJ6ma39elJ8lyD8wPIfgp3opGJD9sX0TgIJk4zSr556qCgC8AN+3BFHe4yuRkEauf4JVLW2RKyyEcA==}
     engines: {node: '>=14.6'}
     hasBin: true
     dev: true
