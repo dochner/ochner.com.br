@@ -3,12 +3,17 @@ const { t } = useI18n()
 </script>
 
 <template>
-  <div>
-    {{ t('not-found') }}
-  </div>
+  <main p="x4 y10" text="center indigo-700 dark:gray-200">
+    <div text-4xl>
+      <div i-carbon-warning inline-block />
+    </div>
+    <div>
+      {{ t('not-found') }}
+    </div>
+    <div>
+      <button btn text-sm m="3 t8" @click="$router.back()">
+        {{ t('button.back') }}
+      </button>
+    </div>
+  </main>
 </template>
-
-<route lang="yaml">
-meta:
-  layout: 404
-</route>

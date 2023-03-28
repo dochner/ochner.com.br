@@ -32,8 +32,12 @@ html {
   background-color: transparent;
 }
 
-*::-webkit-scrollbar {
-  width: 0.5rem;
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar:horizontal {
+  height: 6px;
 }
 
 *::-webkit-scrollbar-track {
@@ -41,7 +45,7 @@ html {
 }
 
 *::-webkit-scrollbar-thumb {
-  background: linear-gradient(to bottom, rgb(103, 0, 177), rgba(168, 85, 247, 1));
+  background: rgba(33, 33, 33, 0.40);
   border-radius: 0.25rem;
 }
 

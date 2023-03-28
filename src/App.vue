@@ -1,23 +1,24 @@
 <script setup lang="ts">
 useHead({
-  title: 'Douglas Ochner',
   meta: [
-    { name: 'description', content: 'Douglas Ochner\'s Website' },
-    {
-      name: 'theme-color',
-      content: computed(() => isDark.value ? '#1d1d1d' : '#ffffff'),
-    },
-  ],
-  link: [
-    {
-      rel: 'icon',
-      type: 'image/png',
-      href: '/favicon-32x32.png',
-    },
+    { property: 'og:title', content: 'Douglas Ochner' },
+    { property: 'og:image', content: 'https://ochner.com.br/og-icon.png' },
+    { name: 'description', content: 'Douglas Ochner\'s Portfolio' },
+    { name: 'twitter:card', content: 'summary' },
   ],
 })
 </script>
 
 <template>
+  <TheHeader />
   <RouterView />
+  <TheFooter />
 </template>
+
+<style>
+#app {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: max-content 1fr max-content
+}
+</style>

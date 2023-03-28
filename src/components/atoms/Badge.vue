@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const props = defineProps<{
+interface PropsType {
   variant?:
   | 'basic'
   | 'primary'
@@ -14,7 +14,15 @@ const props = defineProps<{
   showRemoveButton?: boolean
   clickable?: boolean
   onRemove?: () => void
-}>()
+}
+
+const props = withDefaults(defineProps<PropsType>(), {
+  variant: 'basic',
+  size: 'normal',
+  rounded: false,
+  dot: false,
+  showRemoveButton: false,
+})
 
 const classes = computed(() =>
   [
@@ -42,6 +50,7 @@ const classes = computed(() =>
     <slot />
 
     <button
+      v-if="onRemove"
       type="button"
       className="flex-shrink-0 ml-0.5 h-4 w-4 rounded-full inline-flex items-center justify-center"
       @click="onRemove"

@@ -1,14 +1,9 @@
 ---
-date: 2022-11-19T00:00:00.000Z
 title: Creating a Vue.js 3 App with Vite.js and Vue Router
-tags: [Vue.js, JavaScript, front-end development, web development, tutorial, Vite.js, Vue-router]
-description: This article will provide a step-by-step guide on how to create a Vue.js 3 app with Vite.js and Vue Router, including setting up the development environment, adding Vue Router and building a basic application.
-type: post
-author: dochner
-categories: [web development, front-end development, JavaScript, Vue.js, Vite.js, Vue-router]
+date: 2022-11-19T00:00:00.000Z
+lang: en
+duration: 15min
 ---
-
-<PostHeader :frontmatter="frontmatter" />
 
 Vue (pronounced `/vjuː/`, like view) is a popular JavaScript framework for building user interfaces and single-page applications. With the release of version 3, Vue.js has become even more powerful and efficient, making it a great choice for front-end developers. Vite (French word for `quick`, pronounced /vit/, like `veet`) is a build tool that aims to provide a faster and leaner development experience for modern web projects.
 
