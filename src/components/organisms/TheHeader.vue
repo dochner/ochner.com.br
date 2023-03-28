@@ -15,7 +15,7 @@ const tabs = [
   {
     label: 'Blog',
     name: 'blog',
-    to: '/blog',
+    to: '/posts',
   },
   {
     label: 'Bookmarks',

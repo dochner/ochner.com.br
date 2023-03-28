@@ -5,8 +5,6 @@ import type { RouterLinkProps } from 'vue-router'
 interface PropsType extends Omit<RouterLinkProps, 'to'> {
   variant?: 'primary' | 'secondary' | 'white' | 'text' | 'accent'
   size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl'
-  className?: string
-  onClick?: () => void
   icon?: string
   iconRight?: string
   label?: string
@@ -20,12 +18,8 @@ interface PropsType extends Omit<RouterLinkProps, 'to'> {
 
 const props = defineProps<PropsType>()
 
-const getClasses = (...classes: string[]) => {
-  return classes.filter(Boolean).join(' ')
-}
-
 const classes = computed(() =>
-  getClasses(
+  [
     props.variant === 'primary'
       ? 'text-white bg-primary-600 hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500'
       : '',
@@ -49,7 +43,7 @@ const classes = computed(() =>
     props.size === 'xl' ? 'px-6 py-3 text-base' : '',
     props.fab ? '!rounded-full !p-4' : '',
     props.round ? 'rounded-full' : 'rounded-md',
-  ),
+  ].filter(Boolean),
 )
 
 const isLink = computed(() => props.to)
@@ -72,13 +66,14 @@ const componentIs = computed(() => {
     class="inline-flex items-center justify-center border border-transparent text-base font-semibold h-max"
   >
     <slot name="icon-left">
-      <div class="h-6 w-6 h-5 w-5" :class="[icon, !fab ? '-ml-1 mr-3' : '']" />
+      <div v-if="icon" class="h-6 w-6 h-5 w-5" :class="[icon, !fab ? '-ml-1 mr-3' : '']" />
     </slot>
     <slot>
       <span>{{ label }}</span>
     </slot>
     <slot name="icon-right">
       <div
+        v-if="iconRight"
         class="h-6 w-6 h-5 w-5" :class="[iconRight, !fab ? 'ml-3 -mr-1' : '']"
       />
     </slot>

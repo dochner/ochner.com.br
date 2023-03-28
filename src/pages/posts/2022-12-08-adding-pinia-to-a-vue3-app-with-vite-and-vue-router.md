@@ -1,11 +1,8 @@
 ---
 date: 2022-12-08T00:00:00.000Z
 title: "Adding Pinia Store to a Vue.js 3 App with Vite.js and Vue Router"
-tags: [Vue.js, JavaScript, front-end development, web development, tutorial, Pinia, state management]
-description: This article will provide a step-by-step guide on how to add Pinia store to a Vue.js 3 app built with Vite.js and Vue Router, including setting up the store and examples of how to use it in the application.
-type: post
-author: dochner
-categories: [web development, pinia, state management, front-end development, JavaScript, Vue.js]
+lang: en
+duration: 15min
 ---
 
 When building large and complex applications, it's important to have a centralized place to manage the state of the application. This is where state management libraries like Vuex and Pinia come in. In this tutorial, we will be using Pinia, a lightweight and modular state management library for Vue.js that provides a powerful and easy-to-use API.
