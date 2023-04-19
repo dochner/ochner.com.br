@@ -71,10 +71,10 @@ export default defineConfig({
       },
       markdownItSetup(md) {
         md.use(Shiki, {
-          theme: {
-            light: 'vitesse-light',
-            dark: 'vitesse-dark',
-          },
+          // theme: {
+          //   light: 'shiki-light',
+          //   dark: 'shiki-dark',
+          // },
         })
         md.use(anchor, {
           slugify,
