@@ -23,5 +23,16 @@
     <div id="app"></div>
     <script type="module" src="/src/main.ts"></script>
     <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    <script>
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.on('init', (user) => {
+          if (!user) {
+            window.netlifyIdentity.on('login', () => {
+              document.location.href = '/admin/'
+            })
+          }
+        })
+      }
+    </script>
   </body>
 </html>

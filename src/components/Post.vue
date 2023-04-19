@@ -92,7 +92,7 @@ onMounted(() => {
     <RouterLink
       :to="route.path.split('/').slice(0, -1).join('/') || '/'"
       class="font-mono op50 hover:op75"
-      v-text="'cd ..'"
+      v-text="'Back ..'"
     />
   </div>
 </template>
