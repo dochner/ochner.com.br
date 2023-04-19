@@ -1,4 +1,4 @@
-import { dirname } from 'path'
+import { dirname } from 'node:path'
 import fg from 'fast-glob'
 import fs from 'fs-extra'
 import matter from 'gray-matter'
@@ -6,7 +6,7 @@ import MarkdownIt from 'markdown-it'
 import type { FeedOptions, Item } from 'feed'
 import { Feed } from 'feed'
 
-const DOMAIN = 'https://ochner.com.br'
+const DOMAIN = 'htts://ochner.com.br'
 const AUTHOR = {
   name: 'Douglas Ochner',
   email: 'douglas.ochner@gmail.com',
@@ -28,13 +28,13 @@ async function buildBlogRSS() {
   const options = {
     title: 'Douglas Ochner',
     description: 'Douglas Ochner\' Blog',
-    id: 'https://ochner.com.br/',
-    link: 'https://ochner.com.br/',
+    id: DOMAIN,
+    link: DOMAIN,
     copyright: 'CC BY-NC-SA 4.0 2021 © Douglas Ochner',
     feedLinks: {
-      json: 'https://ochner.com.br/feed.json',
-      atom: 'https://ochner.com.br/feed.atom',
-      rss: 'https://ochner.com.br/feed.xml',
+      json: `${DOMAIN}/feed.json`,
+      atom: `${DOMAIN}/feed.atom`,
+      rss: `${DOMAIN}/feed.xml`,
     },
   }
   const posts: any[] = (
@@ -71,13 +71,12 @@ async function buildBlogRSS() {
 
 async function writeFeed(name: string, options: FeedOptions, items: Item[]) {
   options.author = AUTHOR
-  options.image = 'https://ochner.com.br/avatar.webp'
-  options.favicon = 'https://ochner.com.br/og-icon.png'
+  options.image = `${DOMAIN}/avatar.webp`
+  options.favicon = `${DOMAIN}/og-icon.png`
 
   const feed = new Feed(options)
 
   items.forEach(item => feed.addItem(item))
-  // items.forEach(i=> console.log(i.title, i.date))
 
   await fs.ensureDir(dirname(`./dist/${name}`))
   await fs.writeFile(`./dist/${name}.xml`, feed.rss2(), 'utf-8')

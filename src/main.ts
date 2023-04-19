@@ -4,7 +4,7 @@ import './styles/prose.css'
 import './styles/markdown.css'
 import 'uno.css'
 
-import autoRoutes from 'pages-generated'
+import autoRoutes from 'virtual:generated-pages'
 import NProgress from 'nprogress'
 import { ViteSSG } from 'vite-ssg'
 import dayjs from 'dayjs'
@@ -20,7 +20,7 @@ const routes = autoRoutes.map((i) => {
   }
 })
 
-const scrollBehavior = (to: any, from: any, savedPosition: any) => {
+function scrollBehavior(to: any, from: any, savedPosition: any) {
   if (savedPosition)
     return savedPosition
   else

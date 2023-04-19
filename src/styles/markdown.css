@@ -40,6 +40,7 @@ html:not(.dark) .shiki-dark {
 
 .prose a {
   font-weight: inherit;
+  line-height: 0.98;
   text-decoration: none;
   border-bottom: 1px solid rgba(125, 125, 125, 0.3);
   transition: border 0.3s ease-in-out;
@@ -147,12 +148,8 @@ h6:focus .header-anchor {
   overflow-y: auto;
   overflow-x: hidden;
   text-overflow: ellipsis;
-  opacity: 0;
+  opacity: 0.8;
   transition: all .4s ease-out;
-}
-
-.table-of-contents:hover {
-  opacity: 0.5;
 }
 
 .table-of-contents ul > li::before {
@@ -161,4 +158,8 @@ h6:focus .header-anchor {
 
 .table-of-contents ul > li {
   padding-left: 0.8rem;
+}
+
+ul > li::before {
+  display: none;
 }
