@@ -7,7 +7,7 @@ async function run() {
   const manual = await fs.readFile('_redirects', 'utf-8')
   const gh = new Octokit({ auth: process.env.GITHUB_TOKEN! })
 
-  const redirects: [string, string, number][] = []
+  const redirects: [string, string][] = []
 
   for (let i = 1; i <= pages; i++) {
     const { data: repos } = await gh.repos.listForUser({
@@ -21,7 +21,7 @@ async function run() {
       if (['test', 'static', 'repro', 'issue', 'resume', 'dochner'].some(i => repo.name.includes(i)))
         continue
       if (!repo.private && !repo.fork && !repo.archived)
-        redirects.push([`/${repo.name}`, repo.html_url, 302])
+        redirects.push([`/${repo.name}`, repo.html_url])
     }
   }
 
