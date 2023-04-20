@@ -9,9 +9,11 @@
     "lint": "eslint . --ext .vue,.ts,.html --fix"
   },
   "dependencies": {
+    "@sendgrid/mail": "^7.7.0",
     "@vueuse/core": "^10.0.2",
     "@vueuse/head": "^1.1.26",
     "dayjs": "^1.11.7",
+    "dotenv": "^16.0.3",
     "nprogress": "^0.2.0",
     "vue": "^3.2.47",
     "vue-router": "^4.1.6"

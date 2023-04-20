@@ -1,5 +1,6 @@
 <script setup lang="ts">
-function handleSubmit() {}
+import sendGrid from '@sendgrid/mail'
+import { SENDGRID_API_KEY } from '~/constants'
 
 const userMessage = ref({
   fullName: '',
@@ -7,9 +8,32 @@ const userMessage = ref({
   message: '',
 })
 
-const isBtnDisabled = computed(() => {
-  return !userMessage.value.fullName || !userMessage.value.email || !userMessage.value.message
-})
+function handleSubmit() {
+  sendGrid.setApiKey(SENDGRID_API_KEY)
+
+  const msg = {
+    to: 'douglas.ochner@gmail.com',
+    from: 'douglas.ochner@gmail.com',
+    subject: 'Contact from ochner.com.br',
+    html: `
+      <h2>Full Name: ${userMessage.value.fullName}</h2>
+      <strong>E-mail: ${userMessage.value.email}</strong>
+      <p style="margin-top:16px;">Message: ${userMessage.value.message}</p>
+    `,
+  }
+
+  sendGrid.send(msg)
+    .then(() => {
+      userMessage.value = {
+        fullName: '',
+        email: '',
+        message: '',
+      }
+    })
+    .catch((error) => {
+      console.error(error)
+    })
+}
 </script>
 
 <template>
