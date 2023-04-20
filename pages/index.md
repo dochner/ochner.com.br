@@ -21,8 +21,7 @@ Do you want to discuss a project idea? [Let's talk!](#contact)
 </h2>
 
 If you wanna get in touch, talk to me about a project
-collaboration or just say hi, fill up the awesome form or contact
-me via:
+collaboration or just say hi:
 
 [<span i-mdi-linkedin /> in/douglasochner](https://linkedin.in/douglasochner)
 
