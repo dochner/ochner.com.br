@@ -27,7 +27,3 @@ me via:
 [<span i-mdi-linkedin /> in/douglasochner](https://linkedin.in/douglasochner)
 
 [<span i-mdi-email /> douglas.ochner@gmail.com](mailto:douglas.ochner@gmail.com)
-
-Or simply send me a message and I'll reply soon as possible :)
-
-<ContactForm />
