@@ -10,7 +10,7 @@ export const slugify = (str: string): string => {
     remove(str)
       // Remove control characters
       .replace(rControl, '')
-      // Replace special charaacters
+      // Replace special characters
       .replace(rSpecial, '-')
       // Remove continuos separators
       .replace(/-{2,}/g, '-')

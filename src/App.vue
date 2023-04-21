@@ -1,26 +1,20 @@
 <script setup lang="ts">
-import { useHead } from '@vueuse/head'
+import { APP_URL } from './constants'
 
 useHead({
-  title: 'Douglas Ochner',
-  htmlAttrs: {
-    prefix: 'og: https://ogp.me/ns/website#',
-  },
+  meta: [
+    { property: 'og:title', content: 'Douglas Ochner' },
+    { property: 'og:image', content: `${APP_URL}/og-icon.png` },
+    { name: 'description', content: 'Douglas Ochner\'s Portfolio' },
+    { name: 'twitter:card', content: 'summary' },
+  ],
 })
-
-// @unocss-safelist: bg-sky-400 bg-op-70 fixed z-1031 top-0 inset-x-0 h-2px
 </script>
 
 <template>
-  <Header />
-  <main class="pt-$header-height">
-    <div class="px-6 py-10 md:py-16">
-      <router-view v-slot="{ Component }">
-        <transition name="fade" mode="out-in">
-          <component :is="Component" />
-        </transition>
-      </router-view>
-    </div>
+  <TheNavBar />
+  <main class="px-7 py-10">
+    <router-view />
+    <TheFooter />
   </main>
-  <Footer />
 </template>

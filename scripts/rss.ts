@@ -1,13 +1,12 @@
-import { dirname } from 'path'
+import { dirname } from 'node:path'
 import fg from 'fast-glob'
 import fs from 'fs-extra'
 import matter from 'gray-matter'
 import MarkdownIt from 'markdown-it'
 import type { FeedOptions, Item } from 'feed'
 import { Feed } from 'feed'
-import { codeBlockFilename } from './markdown'
 
-const DOMAIN = 'https://ochner.com.br'
+const DOMAIN = 'htts://ochner.com.br'
 const AUTHOR = {
   name: 'Douglas Ochner',
   email: 'douglas.ochner@gmail.com',
@@ -19,16 +18,18 @@ const markdown = MarkdownIt({
   linkify: true,
 })
 
-markdown.use(codeBlockFilename)
+async function run() {
+  await buildBlogRSS()
+}
 
-export async function buildBlogRSS() {
-  const files = await fg('posts/*.md')
+async function buildBlogRSS() {
+  const files = await fg('pages/posts/*.md')
 
   const options = {
     title: 'Douglas Ochner',
     description: 'Douglas Ochner\' Blog',
-    id: `${DOMAIN}/`,
-    link: `${DOMAIN}/`,
+    id: DOMAIN,
+    link: DOMAIN,
     copyright: 'CC BY-NC-SA 4.0 2021 © Douglas Ochner',
     feedLinks: {
       json: `${DOMAIN}/feed.json`,
@@ -39,9 +40,12 @@ export async function buildBlogRSS() {
   const posts: any[] = (
     await Promise.all(
       files.filter(i => !i.includes('index'))
-        .map(async(i) => {
+        .map(async (i) => {
           const raw = await fs.readFile(i, 'utf-8')
           const { data, content } = matter(raw)
+
+          if (data.lang !== 'en')
+            return
 
           const html = markdown.render(content)
             .replace('src="/', `src="${DOMAIN}/`)
@@ -51,8 +55,10 @@ export async function buildBlogRSS() {
 
           return {
             ...data,
+            date: new Date(data.date),
             content: html,
             author: [AUTHOR],
+            link: DOMAIN + i.replace(/^pages(.+)\.md$/, '$1'),
           }
         }),
     ))
@@ -65,8 +71,8 @@ export async function buildBlogRSS() {
 
 async function writeFeed(name: string, options: FeedOptions, items: Item[]) {
   options.author = AUTHOR
-  options.image = 'https://ochner.com.br/avatar.png'
-  options.favicon = 'https://ochner.com.br/logo.png'
+  options.image = `${DOMAIN}/avatar.webp`
+  options.favicon = `${DOMAIN}/og-icon.png`
 
   const feed = new Feed(options)
 
@@ -77,3 +83,5 @@ async function writeFeed(name: string, options: FeedOptions, items: Item[]) {
   await fs.writeFile(`./dist/${name}.atom`, feed.atom1(), 'utf-8')
   await fs.writeFile(`./dist/${name}.json`, feed.json1(), 'utf-8')
 }
+
+run()

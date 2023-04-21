@@ -1,60 +1,39 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="author" content="Douglas Ochner" />
+    <meta name="author" content="Anthony Fu" />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
     <meta name="revisit-after" content="7 days" />
-    <meta name="description" content="I love develop websites and create amazing things" />
-    <meta property="og:title" content="Douglas Ochner" />
-    <meta property="og:image" content="https://www.ochner.com.br/thumbnail.png" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://www.ochner.com.br/"/>
-    <meta property="og:description" content="I love develop websites and create amazing things" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="cache-control" content="max-age=31536000" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-    <link rel="manifest" href="/site.webmanifest" />
-    <link
-      rel="alternate"
-      type="application/rss+xml"
-      title="Ochners blog"
-      href="/feed.xml"
-    />
-    <meta name="msapplication-TileColor" content="#0a0a0a" />
-    <meta name="theme-color" content="#0a0a0a" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Fira+Code&family=Inter:wght@200;400;600&display=swap" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Fira+Code&family=Inter:wght@200;400;600&display=swap"
-      rel="stylesheet"
-      media="print"
-      onload="this.media='all'"
-    />
-    <title>Douglas Gabriel Ochner</title>
+    <link rel="icon" href="/og-icon.png" type="image/png" />
+    <link rel="alternate" type="application/rss+xml" title="Douglas Ochner's Blog" href="/feed.xml" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <title>Douglas Ochner</title>
     <script>
-      (function() {
-        const prefersDark
-            = window.matchMedia
-            && window.matchMedia('(prefers-color-scheme: dark)').matches
+      (function () {
+        const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
         const setting = localStorage.getItem('vueuse-color-scheme') || 'auto'
         if (setting === 'dark' || (prefersDark && setting !== 'light'))
           document.documentElement.classList.toggle('dark', true)
       })()
     </script>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q2BD79V4DF"></script>
-    <script>
-      window.dataLayer = window.dataLayer || []
-function gtag() { dataLayer.push(arguments) }
-      gtag('js', new Date())
-
-gtag('config', 'G-Q2BD79V4DF')
-    </script>
-    <script async defer data-website-id="e96992ce-120a-4238-ac46-25273e2f9719" src="https://dochner-umami.herokuapp.com/umami.js"></script>
+    <script async src="https://umami.ochner.com.br/script.js" data-website-id="1c5bd28f-bb5f-4b3b-8eee-419139b5ab3d"></script>
   </head>
-  <body>
-    <div id="app" class="font-sans"></div>
+  <body class="font-sans text-gray-700 dark:text-gray-200">
+    <div id="app"></div>
     <script type="module" src="/src/main.ts"></script>
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    <script>
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.on('init', (user) => {
+          if (!user) {
+            window.netlifyIdentity.on('login', () => {
+              document.location.href = '/admin/'
+            })
+          }
+        })
+      }
+    </script>
   </body>
 </html>

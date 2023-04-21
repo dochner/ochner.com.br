@@ -1,48 +1,45 @@
 import '@unocss/reset/tailwind.css'
 import './styles/main.css'
-import './styles/load.css'
+import './styles/prose.css'
 import './styles/markdown.css'
 import 'uno.css'
 
+import autoRoutes from 'virtual:generated-pages'
+import NProgress from 'nprogress'
 import { ViteSSG } from 'vite-ssg'
 import dayjs from 'dayjs'
-import LocalizedFormat from 'dayjs/plugin/localizedFormat'
-import type { RouterScrollBehavior } from 'vue-router'
+import LocalizedFormat from 'dayjs/plugin/localizedFormat.js'
 import App from './App.vue'
 
-import routes from '~pages'
-
-if (import.meta.env.DEV)
-  // eslint-disable-next-line no-console
-  console.log(routes)
-
-const scrollBehavior: RouterScrollBehavior = (to, from, savedPosition) => {
-  if (to.hash) {
-    return {
-      el: decodeURIComponent(to.hash),
-      top: 120,
-      behavior: 'smooth',
-    }
+const routes = autoRoutes.map((i) => {
+  return {
+    ...i,
+    alias: i.path.endsWith('/')
+      ? `${i.path}index.html`
+      : `${i.path}.html`,
   }
-  else {
-    return new Promise((resolve) => {
-      setTimeout(() => {
-        if (savedPosition)
-          resolve(savedPosition)
-        else
-          resolve({ left: 0, top: 0 })
-      }, 300)
-    })
-  }
+})
+
+function scrollBehavior(to: any, from: any, savedPosition: any) {
+  if (savedPosition)
+    return savedPosition
+  else
+    return { top: 0 }
 }
 
 export const createApp = ViteSSG(
   App,
   { routes, scrollBehavior },
-  (ctx) => {
+  ({ router, isClient }) => {
     dayjs.extend(LocalizedFormat)
 
-    // install all modules under `modules/`
-    Object.values(import.meta.globEager('./modules/*.ts')).map(i => i.install?.(ctx))
+    if (isClient) {
+      router.beforeEach(() => {
+        NProgress.start()
+      })
+      router.afterEach(() => {
+        NProgress.done()
+      })
+    }
   },
 )
