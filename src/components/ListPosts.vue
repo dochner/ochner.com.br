@@ -23,7 +23,7 @@ const routes: Post[] = router.getRoutes()
     upcoming: i.meta.frontmatter.upcoming,
   }))
 
-const posts = computed(() => (props.posts || routes).filter(i => !englishOnly.value || i.lang !== 'zh'))
+const posts = computed(() => (props.posts || routes).filter(i => !englishOnly.value || i.lang !== 'pt-BR'))
 
 const getYear = (a: Date | string | number) => new Date(a).getFullYear()
 const isSameYear = (a: Date | string | number, b: Date | string | number) => a && b && getYear(a) === getYear(b)

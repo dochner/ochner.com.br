@@ -1,9 +1,9 @@
 <script setup lang="ts">
 const steps = [
-  {
-    name: 'IT Consultant / Aubay Portugal · 2022 → Present',
+    {
+    name: 'Frontend Engineer / Sword Health · 2023 → Present',
     description:
-      ' Vue.js, TypeScript, SASS, Agile Methodologies, Angular, Angular Material, Node.js, Nuxt.js, Quasar',
+      'Vue.js, TypeScript, SASS, Agile Methodologies, Vitest, Cypress, TailwindCSS',
     href: '#',
     status: 'current',
   },
@@ -13,6 +13,13 @@ const steps = [
       'Nuxt.js, Quasar, React, Angular, TypeScript, SASS, Node.js, Vue.js',
     href: '#',
     status: 'current',
+  },
+  {
+    name: 'IT Consultant / Aubay Portugal · 2022 → 2023',
+    description:
+      ' Vue.js, TypeScript, SASS, Agile Methodologies, Angular, Angular Material, Node.js, Nuxt.js, Quasar',
+    href: '#',
+    status: 'complete',
   },
   {
     name: 'Fullstack Developer → Frontend Devloper / Multiplier · 2020 → 2022',
