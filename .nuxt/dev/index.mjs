@@ -8,7 +8,7 @@ import { getRequestDependencies, getPreloadLinks, getPrefetchLinks, createRender
 import { stringify, uneval } from 'file:///Users/douglasochner/projects/studies/ochner.com.br/node_modules/.pnpm/devalue@5.0.0/node_modules/devalue/index.js';
 import destr from 'file:///Users/douglasochner/projects/studies/ochner.com.br/node_modules/.pnpm/destr@2.0.3/node_modules/destr/dist/index.mjs';
 import { parseURL, withoutBase, joinURL, getQuery, withQuery, withTrailingSlash, joinRelativeURL } from 'file:///Users/douglasochner/projects/studies/ochner.com.br/node_modules/.pnpm/ufo@1.5.3/node_modules/ufo/dist/index.mjs';
-import { renderToString } from 'file:///Users/douglasochner/projects/studies/ochner.com.br/node_modules/.pnpm/vue@3.4.28/node_modules/vue/server-renderer/index.mjs';
+import { renderToString } from 'file:///Users/douglasochner/projects/studies/ochner.com.br/node_modules/.pnpm/vue@3.4.28_typescript@5.4.5/node_modules/vue/server-renderer/index.mjs';
 import { hash } from 'file:///Users/douglasochner/projects/studies/ochner.com.br/node_modules/.pnpm/ohash@1.1.3/node_modules/ohash/dist/index.mjs';
 import { propsToString, renderSSRHead } from 'file:///Users/douglasochner/projects/studies/ochner.com.br/node_modules/.pnpm/@unhead+ssr@1.9.13/node_modules/@unhead/ssr/dist/index.mjs';
 import { createFetch as createFetch$1, Headers as Headers$1 } from 'file:///Users/douglasochner/projects/studies/ochner.com.br/node_modules/.pnpm/ofetch@1.3.4/node_modules/ofetch/dist/node.mjs';
@@ -23,7 +23,7 @@ import { toRouteMatcher, createRouter } from 'file:///Users/douglasochner/projec
 import { AsyncLocalStorage } from 'node:async_hooks';
 import { consola } from 'file:///Users/douglasochner/projects/studies/ochner.com.br/node_modules/.pnpm/consola@3.2.3/node_modules/consola/dist/index.mjs';
 import { getContext } from 'file:///Users/douglasochner/projects/studies/ochner.com.br/node_modules/.pnpm/unctx@2.3.1/node_modules/unctx/dist/index.mjs';
-import { isVNode, version, unref } from 'file:///Users/douglasochner/projects/studies/ochner.com.br/node_modules/.pnpm/vue@3.4.28/node_modules/vue/index.mjs';
+import { isVNode, version, unref } from 'file:///Users/douglasochner/projects/studies/ochner.com.br/node_modules/.pnpm/vue@3.4.28_typescript@5.4.5/node_modules/vue/index.mjs';
 import { createServerHead as createServerHead$1, CapoPlugin } from 'file:///Users/douglasochner/projects/studies/ochner.com.br/node_modules/.pnpm/unhead@1.9.13/node_modules/unhead/dist/index.mjs';
 import { defineHeadPlugin } from 'file:///Users/douglasochner/projects/studies/ochner.com.br/node_modules/.pnpm/@unhead+shared@1.9.13/node_modules/@unhead/shared/dist/index.mjs';
 
@@ -71,8 +71,8 @@ const defineAppConfig = (config) => config;
 
 const appConfig0 = defineAppConfig({
   ui: {
-    primary: "lime",
-    gray: "neutral"
+    primary: "amber",
+    gray: "stone"
   }
 });
 
@@ -654,7 +654,7 @@ const devReducers = {
   URL: (data) => data instanceof URL ? data.toString() : void 0
 };
 const asyncContext = getContext("nuxt-dev", { asyncContext: true, AsyncLocalStorage });
-const _9SZrreisYd = (nitroApp) => {
+const _38K55T6Gu4 = (nitroApp) => {
   const handler = nitroApp.h3App.handler;
   nitroApp.h3App.handler = (event) => {
     return asyncContext.callAsync({ logs: [], event }, () => handler(event));
@@ -730,7 +730,7 @@ const _e28GDkV5no = (function(nitro) {
 
 const plugins = [
   _R1qOvJuYdy,
-_9SZrreisYd,
+_38K55T6Gu4,
 _e28GDkV5no
 ];
 
@@ -861,11 +861,11 @@ const errorHandler = (async function errorhandler(error, event) {
   return send(event, html);
 });
 
-const _lazy_XdgFGn = () => Promise.resolve().then(function () { return renderer$1; });
+const _lazy_N8jZYj = () => Promise.resolve().then(function () { return renderer$1; });
 
 const handlers = [
-  { route: '/__nuxt_error', handler: _lazy_XdgFGn, lazy: true, middleware: false, method: undefined },
-  { route: '/**', handler: _lazy_XdgFGn, lazy: true, middleware: false, method: undefined }
+  { route: '/__nuxt_error', handler: _lazy_N8jZYj, lazy: true, middleware: false, method: undefined },
+  { route: '/**', handler: _lazy_N8jZYj, lazy: true, middleware: false, method: undefined }
 ];
 
 function createNitroApp() {
