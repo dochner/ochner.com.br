@@ -1,4 +1,5 @@
-import process from 'node:process';globalThis._importMeta_={url:import.meta.url,env:process.env};import { Server } from 'node:http';
+import process from 'node:process';globalThis._importMeta_={url:import.meta.url,env:process.env};import 'file:///Users/douglasochner/projects/studies/ochner.com.br/node_modules/.pnpm/node-fetch-native@1.6.4/node_modules/node-fetch-native/dist/polyfill.mjs';
+import { Server } from 'node:http';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { mkdirSync } from 'node:fs';

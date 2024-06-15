@@ -1,13 +1,16 @@
 {
   "name": "nuxt-app",
-  "private": true,
   "type": "module",
+  "private": true,
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare"
+  },
+  "dependencies": {
+    "@vueuse/nuxt": "^10.11.0"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^2.21.1",
@@ -22,8 +25,5 @@
     "nuxt": "^3.12.1",
     "pinia": "^2.1.7",
     "typescript-eslint": "^7.13.0"
-  },
-  "dependencies": {
-    "@vueuse/nuxt": "^10.11.0"
   }
 }
