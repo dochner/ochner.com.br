@@ -19,6 +19,7 @@
     "@nuxt/eslint": "^0.3.13",
     "@pinia/nuxt": "^0.5.1",
     "eslint": "^9.4.0",
+    "eslint-plugin-format": "^0.1.2",
     "nuxt": "^3.12.1",
     "pinia": "^2.1.7"
   }
