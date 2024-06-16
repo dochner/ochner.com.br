@@ -1,15 +1,25 @@
+<script setup lang="ts">
+const opened = ref(true)
+
+const appStore = useAppStore()
+</script>
+
 <template>
   <SOWindow>
+    <template #header>
+      <h1>Contact</h1>
+    </template>
     <UContainer>
-      <UCard>
-        <template #header>
-          <div class="flex justify-between">
-            <h1>Welcome to Nuxt UI Starter</h1>
-            <ColorScheme><USelect v-model="$colorMode.preference" :options="['system', 'light', 'dark']" /></ColorScheme>
-          </div>
-        </template>
-        <UButton icon="i-heroicons-book-open" to="https://ui.nuxt.com" target="_blank">Open Nuxt UI Documentation</UButton>
-      </UCard>
+      <p>Contact me via:</p>
+
+      <ul>
+        <li>
+          Email: <a href="mailto:douglas@example.com" />
+        </li>
+        <li>
+          Phone: <a href="tel:+1234567890">+1234567890</a>
+        </li>
+      </ul>
     </UContainer>
   </SOWindow>
 </template>

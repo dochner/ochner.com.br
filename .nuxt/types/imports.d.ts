@@ -168,6 +168,7 @@ declare global {
   const useAnalyticsPageEvent: typeof import('../../node_modules/.pnpm/nuxt@3.12.1_@opentelemetry+api@1.8.0_@unocss+reset@0.61.0_eslint@9.4.0_floating-vue@5.2.2_typ_titu6yzci77xc4mcvmhqcmmm3a/node_modules/nuxt/dist/app/composables/script-stubs')['useAnalyticsPageEvent']
   const useAnimate: typeof import('../../node_modules/.pnpm/@vueuse+core@10.11.0_vue@3.4.28/node_modules/@vueuse/core')['useAnimate']
   const useAppConfig: typeof import('../../node_modules/.pnpm/nuxt@3.12.1_@opentelemetry+api@1.8.0_@unocss+reset@0.61.0_eslint@9.4.0_floating-vue@5.2.2_typ_titu6yzci77xc4mcvmhqcmmm3a/node_modules/nuxt/dist/app/config')['useAppConfig']
+  const useAppStore: typeof import('../../stores/app')['useAppStore']
   const useArrayDifference: typeof import('../../node_modules/.pnpm/@vueuse+core@10.11.0_vue@3.4.28/node_modules/@vueuse/core')['useArrayDifference']
   const useArrayEvery: typeof import('../../node_modules/.pnpm/@vueuse+core@10.11.0_vue@3.4.28/node_modules/@vueuse/core')['useArrayEvery']
   const useArrayFilter: typeof import('../../node_modules/.pnpm/@vueuse+core@10.11.0_vue@3.4.28/node_modules/@vueuse/core')['useArrayFilter']
@@ -597,6 +598,7 @@ declare module 'vue' {
     readonly useAnalyticsPageEvent: UnwrapRef<typeof import('../../node_modules/.pnpm/nuxt@3.12.1_@opentelemetry+api@1.8.0_@unocss+reset@0.61.0_eslint@9.4.0_floating-vue@5.2.2_typ_titu6yzci77xc4mcvmhqcmmm3a/node_modules/nuxt/dist/app/composables/script-stubs')['useAnalyticsPageEvent']>
     readonly useAnimate: UnwrapRef<typeof import('../../node_modules/.pnpm/@vueuse+core@10.11.0_vue@3.4.28/node_modules/@vueuse/core')['useAnimate']>
     readonly useAppConfig: UnwrapRef<typeof import('../../node_modules/.pnpm/nuxt@3.12.1_@opentelemetry+api@1.8.0_@unocss+reset@0.61.0_eslint@9.4.0_floating-vue@5.2.2_typ_titu6yzci77xc4mcvmhqcmmm3a/node_modules/nuxt/dist/app/config')['useAppConfig']>
+    readonly useAppStore: UnwrapRef<typeof import('../../stores/app')['useAppStore']>
     readonly useArrayDifference: UnwrapRef<typeof import('../../node_modules/.pnpm/@vueuse+core@10.11.0_vue@3.4.28/node_modules/@vueuse/core')['useArrayDifference']>
     readonly useArrayEvery: UnwrapRef<typeof import('../../node_modules/.pnpm/@vueuse+core@10.11.0_vue@3.4.28/node_modules/@vueuse/core')['useArrayEvery']>
     readonly useArrayFilter: UnwrapRef<typeof import('../../node_modules/.pnpm/@vueuse+core@10.11.0_vue@3.4.28/node_modules/@vueuse/core')['useArrayFilter']>
@@ -1019,6 +1021,7 @@ declare module '@vue/runtime-core' {
     readonly useAnalyticsPageEvent: UnwrapRef<typeof import('../../node_modules/.pnpm/nuxt@3.12.1_@opentelemetry+api@1.8.0_@unocss+reset@0.61.0_eslint@9.4.0_floating-vue@5.2.2_typ_titu6yzci77xc4mcvmhqcmmm3a/node_modules/nuxt/dist/app/composables/script-stubs')['useAnalyticsPageEvent']>
     readonly useAnimate: UnwrapRef<typeof import('../../node_modules/.pnpm/@vueuse+core@10.11.0_vue@3.4.28/node_modules/@vueuse/core')['useAnimate']>
     readonly useAppConfig: UnwrapRef<typeof import('../../node_modules/.pnpm/nuxt@3.12.1_@opentelemetry+api@1.8.0_@unocss+reset@0.61.0_eslint@9.4.0_floating-vue@5.2.2_typ_titu6yzci77xc4mcvmhqcmmm3a/node_modules/nuxt/dist/app/config')['useAppConfig']>
+    readonly useAppStore: UnwrapRef<typeof import('../../stores/app')['useAppStore']>
     readonly useArrayDifference: UnwrapRef<typeof import('../../node_modules/.pnpm/@vueuse+core@10.11.0_vue@3.4.28/node_modules/@vueuse/core')['useArrayDifference']>
     readonly useArrayEvery: UnwrapRef<typeof import('../../node_modules/.pnpm/@vueuse+core@10.11.0_vue@3.4.28/node_modules/@vueuse/core')['useArrayEvery']>
     readonly useArrayFilter: UnwrapRef<typeof import('../../node_modules/.pnpm/@vueuse+core@10.11.0_vue@3.4.28/node_modules/@vueuse/core')['useArrayFilter']>
