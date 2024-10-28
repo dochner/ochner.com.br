@@ -10,7 +10,7 @@ function toggleDark() {
 const links = [
   {
     name: 'GitHub',
-    href: 'https://github.com/xdesign-dev/shadcn-nuxt-starter',
+    href: 'https://github.com/dochner',
     icon: GithubLogoIcon,
   },
 ]

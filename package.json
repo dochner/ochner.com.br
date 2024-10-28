@@ -5,7 +5,7 @@
   "scripts": {
     "build": "nuxi build",
     "dev:pwa": "VITE_PLUGIN_PWA=true nuxi dev",
-    "dev": "nuxi dev --host 127.0.0.1 --port 7000",
+    "dev": "nuxi dev --port 8080",
     "clean": "nuxi cleanup",
     "generate": "nuxi generate",
     "prepare": "nuxi prepare",

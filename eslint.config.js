@@ -7,12 +7,11 @@ export default nuxt(
     {
       unocss: true,
       formatters: true,
-    },
-    {
-      // Without `files`, they are general rules for all files
-      rules: {
-        'vue/no-multiple-template-root': 'off',
-      },
-    },
+      vue: {
+        overrides: {
+          "vue/no-multiple-template-root": "off"
+        }
+      }
+    }
   ),
 )

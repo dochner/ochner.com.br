@@ -11,12 +11,15 @@ export type Color =
   | 'blue'
   | 'yellow'
   | 'violet'
+  | 'indigo'
+  | 'amber'
 
 // Create an array of color values
 export const allColors: Color[] = [
   'zinc',
   'rose',
   'blue',
+  'indigo',
   'green',
   'orange',
   'red',
@@ -26,6 +29,7 @@ export const allColors: Color[] = [
   'neutral',
   'yellow',
   'violet',
+  'amber',
 ]
 
 export const colors = {
