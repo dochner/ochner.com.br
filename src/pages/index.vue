@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-  <header class="relative h-screen">
+  <header class="relative h-screen pt-$header-height">
     <div class="page-padding">
       <div class="max-w-screen-xl w-full mx-auto">
         <div class="z-2 flex h-[80vh] min-h-[580px] mb-12 pt-20 flex-col justify-center items-center text-center">
@@ -22,10 +22,12 @@
     class="relative pt-12"
   >
     <div class="page-padding">
-      <div class="max-w-screen-xl w-full mx-auto">
-        <h3 class="text-4xl font-serif text-center mb-12">
-          Alguns dos meus trabalhos
-        </h3>
+      <div class="max-w-screen-xl w-full mb-16 mx-auto">
+        <div class="max-w-350px sm:max-w-sm lg:max-w-md lg:mb-30 mx-auto">
+          <h3 class="text-5xl lg:text-6xl font-serif text-center">
+            Alguns dos meus trabalhos
+          </h3>
+        </div>
 
         <div class="flex flex-col items-center">
           <div class="w-full flex-1">
