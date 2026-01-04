@@ -1,5 +1,7 @@
 <script setup lang="ts">
 import { APP_URL } from './constants'
+import { Analytics } from '@vercel/analytics/vue';
+
 
 useHead({
   meta: [
@@ -17,6 +19,7 @@ useHead({
 </script>
 
 <template>
+  <Analytics />
   <CustomCursor />
   <TheNavBar />
   <main class="px-7 py-10">

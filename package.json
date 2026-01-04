@@ -9,6 +9,7 @@
     "lint": "eslint . --ext .vue,.ts,.html --fix"
   },
   "dependencies": {
+    "@vercel/analytics": "^1.6.1",
     "@vueuse/core": "^10.0.2",
     "@vueuse/head": "^1.1.26",
     "dayjs": "^1.11.7",
