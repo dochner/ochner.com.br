@@ -1,36 +1,98 @@
 <script setup lang="ts">
 const steps = [
-    {
-    name: 'Frontend Engineer / Sword Health · 2023 → Present',
-    description:
-      'Vue.js, TypeScript, SASS, Agile Methodologies, Vitest, Cypress, TailwindCSS',
+  {
+    name: 'Senior Frontend Engineer / Sword Health · Nov 2025 → Present',
+    role: 'Senior Frontend Engineer',
+    company: 'Sword Health',
+    location: 'Porto, Portugal (Remote)',
+    period: 'Nov 2025 - Present',
+    description: 'Vue.js, TypeScript, SASS, TailwindCSS, Vitest, Cypress',
+    achievements: [
+      'Promoted to Senior role at $2B+ health tech unicorn',
+      'Leading technical direction for patient-facing applications',
+      'Mentoring team members and driving engineering excellence',
+      'Contributing to strategic initiatives impacting product scalability',
+    ],
     href: '#',
     status: 'current',
   },
   {
-    name: 'Freelancer · 2020 → Present',
-    description:
-      'Nuxt.js, Quasar, React, Angular, TypeScript, SASS, Node.js, Vue.js',
+    name: 'Frontend Engineer / Sword Health · May 2023 → Nov 2025',
+    role: 'Frontend Engineer',
+    company: 'Sword Health',
+    location: 'Porto, Portugal (Remote)',
+    period: 'May 2023 - Nov 2025 (2 years 7 months)',
+    description: 'Vue.js, TypeScript, SASS, TailwindCSS, Vitest, Cypress',
+    achievements: [
+      'Led Vue 2 → Vue 3 migration across multiple critical projects',
+      'Co-architected internal design system with design team',
+      'Mentored 3+ engineers through code reviews and pair programming',
+      'Established code standards and testing strategies (unit + E2E)',
+      'Improved patient satisfaction metrics through accessibility focus',
+    ],
     href: '#',
     status: 'current',
   },
   {
-    name: 'IT Consultant / Aubay Portugal · 2022 → 2023',
-    description:
-      ' Vue.js, TypeScript, SASS, Agile Methodologies, Angular, Angular Material, Node.js, Nuxt.js, Quasar',
+    name: 'IT Consultant / Aubay Portugal · Nov 2022 → May 2023',
+    role: 'IT Consultant',
+    company: 'Aubay Portugal',
+    location: 'Portugal (Remote)',
+    period: 'Nov 2022 - May 2023 (7 months)',
+    description: 'Vue.js, TypeScript, Angular, Angular Material, Node.js',
+    achievements: [
+      'Built healthcare management systems for SPMS (50,000+ professionals)',
+      'Developed secure, GDPR-compliant interfaces for sensitive health data',
+      'Collaborated with cross-functional teams on healthcare infrastructure',
+      'Implemented responsive designs for clinical environments',
+    ],
     href: '#',
     status: 'complete',
   },
   {
-    name: 'Fullstack Developer → Frontend Devloper / Multiplier · 2020 → 2022',
-    description: 'Nuxt.js, Quasar, Agile Methodologies, JavaScript, Vue.js',
+    name: 'Frontend Engineer / Multiplier · Jan 2021 → Nov 2022',
+    role: 'Frontend Engineer',
+    company: 'Multiplier',
+    location: 'Santa Catarina, Brasil (Remote)',
+    period: 'Jan 2021 - Nov 2022 (1 year 11 months)',
+    description: 'Vue 3, Nuxt, Vite, GraphQL, Tailwind CSS, UnoCSS, SASS',
+    achievements: [
+      'Architected greenfield e-commerce platform with Vue 3 + Nuxt + Vite',
+      'Led Laravel Blade → Vue 3 CRM rewrite, improving load times',
+      'Built design system using Tailwind CSS, UnoCSS, BEM methodology',
+      'Implemented modern state management patterns across applications',
+      'Created reusable component library used across client projects',
+    ],
     href: '#',
     status: 'complete',
   },
   {
-    name: 'IT Support Analyst / Lunelli  · 2013 → 2020',
-    description:
-      'Inèdit Software, Lansweeper, Bitdefender, Users training, IT Support, Helpdesk, ITIL',
+    name: 'Full Stack Developer / Multiplier · Nov 2020 → Jan 2021',
+    role: 'Full Stack Developer',
+    company: 'Multiplier',
+    location: 'Jaraguá do Sul, Brasil',
+    period: 'Nov 2020 - Jan 2021 (3 months)',
+    description: 'Vue.js, Node.js, JavaScript',
+    achievements: [
+      'Transitioned from IT Support to Software Development',
+      'Built full-stack applications using modern JavaScript',
+    ],
+    href: '#',
+    status: 'complete',
+  },
+  {
+    name: 'IT Support Analyst / Grupo Lunelli · Aug 2013 → Nov 2020',
+    role: 'IT Support Analyst',
+    company: 'Grupo Lunelli',
+    location: 'Brasil',
+    period: 'Aug 2013 - Nov 2020 (7 years 4 months)',
+    description: 'IT Support, Networking, Customer Service, Technical Support',
+    achievements: [
+      'Provided tier 1-2 technical support for 600+ employees',
+      'Managed network infrastructure and troubleshooting',
+      'Developed strong problem-solving and communication skills',
+      'Completed intensive training in modern web technologies (2020)',
+    ],
     href: '#',
     status: 'complete',
   },
@@ -44,13 +106,11 @@ const steps = [
   >
     <div>
       <h2>
-        <a href="#experiences">My Experience</a>
+        <a href="#experiences">Professional Experience</a>
       </h2>
 
       <p class="mt-3 text-lg leading-6 text-gray-500 dark:text-gray-300">
-        With my experience in web development and support analysis, I am
-        confident in my ability to tackle the challenges that comes my way, and
-        excited to grow up with them.
+        5+ years of specialized frontend development experience, with proven track record of leading critical migrations, mentoring engineers, and building scalable applications for health tech, SaaS, and e-commerce platforms.
       </p>
     </div>
     <div>
@@ -84,6 +144,11 @@ const steps = [
                   <span class="text-xs font-semibold tracking-wide uppercase">
                     {{ step.name }}
                   </span>
+                  <ul v-if="step.achievements" class="mt-2 text-sm text-gray-600 dark:text-gray-400 space-y-1 list-disc list-inside">
+                    <li v-for="(achievement, achIdx) in step.achievements" :key="achIdx">
+                      {{ achievement }}
+                    </li>
+                  </ul>
                   <div class="row gap-sm mt-sm">
                     <template v-if="step?.description">
                       <Badge
@@ -118,6 +183,11 @@ const steps = [
                   >
                     {{ step.name }}
                   </span>
+                  <ul v-if="step.achievements" class="mt-2 text-sm text-gray-600 dark:text-gray-400 space-y-1 list-disc list-inside">
+                    <li v-for="(achievement, achIdx) in step.achievements" :key="achIdx">
+                      {{ achievement }}
+                    </li>
+                  </ul>
                   <div class="row gap-sm mt-sm">
                     <template v-if="step?.description">
                       <Badge

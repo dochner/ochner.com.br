@@ -1,17 +1,26 @@
 :root {
-  --c-bg: #fff;
-  --c-scrollbar: #eee;
-  --c-scrollbar-hover: #bbb;
+  --c-bg: #ffffff;
+  --c-text: #1e293b;
+  --c-text-light: #64748b;
+  --c-border: #e2e8f0;
+  --c-scrollbar: #e2e8f0;
+  --c-scrollbar-hover: #cbd5e1;
+  --c-card-bg: #f8fafc;
 }
 
 html {
   background-color: var(--c-bg);
+  color: var(--c-text);
 }
 
 html.dark {
-  --c-bg: #050505;
-  --c-scrollbar: #111;
-  --c-scrollbar-hover: #222;
+  --c-bg: #0f172a;
+  --c-text: #f1f5f9;
+  --c-text-light: #94a3b8;
+  --c-border: #1e293b;
+  --c-scrollbar: #1e293b;
+  --c-scrollbar-hover: #334155;
+  --c-card-bg: #1e293b;
 }
 
 html {
@@ -82,4 +91,184 @@ h2 + p > em:first-child {
 
 html:not(.dark) [img-dark] {
   display: none;
+}
+
+/* Hero Section Styles */
+.hero-section {
+  margin-bottom: 3rem;
+  padding: 2rem 0;
+}
+
+.hero-section h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(135deg, #2563eb 0%, #0ea5e9 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero-section h2 {
+  font-size: 1.25rem;
+  font-weight: 400;
+  margin-bottom: 1.5rem;
+  color: var(--c-text-light);
+}
+
+.hero-badges {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.hero-badges .badge {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: var(--c-card-bg);
+  border: 1px solid var(--c-border);
+  border-radius: 8px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.hero-badges .badge:hover {
+  border-color: #2563eb;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.15);
+}
+
+/* Hero Stats Grid */
+.hero-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.stat-card {
+  background: var(--c-card-bg);
+  border: 1px solid var(--c-border);
+  border-radius: 12px;
+  padding: 1.5rem 1rem;
+  text-align: center;
+  transition: all 0.2s ease;
+}
+
+.stat-card:hover {
+  border-color: #2563eb;
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(37, 99, 235, 0.12);
+}
+
+.stat-number {
+  font-size: 2rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #2563eb 0%, #0ea5e9 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 0.25rem;
+}
+
+.stat-label {
+  font-size: 0.75rem;
+  color: var(--c-text-light);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* CTA Section */
+.cta-section {
+  display: flex;
+  gap: 1rem;
+  margin: 2rem 0;
+  flex-wrap: wrap;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 0.875rem 2rem;
+  background: linear-gradient(135deg, #2563eb 0%, #0ea5e9 100%);
+  color: white;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  border: none;
+}
+
+.cta-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(37, 99, 235, 0.3);
+}
+
+.cta-button-secondary {
+  display: inline-block;
+  padding: 0.875rem 2rem;
+  background: transparent;
+  color: #2563eb;
+  border: 2px solid #2563eb;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.cta-button-secondary:hover {
+  background: #2563eb;
+  color: white;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .hero-section h1 {
+    font-size: 2rem;
+  }
+
+  .hero-section h2 {
+    font-size: 1.1rem;
+  }
+
+  .hero-badges {
+    flex-direction: column;
+  }
+
+  .hero-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .cta-section {
+    flex-direction: column;
+  }
+
+  .cta-button,
+  .cta-button-secondary {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* Custom Cursor - Hide default browser cursor on desktop */
+@media (pointer: fine) {
+  html,
+  html *,
+  body,
+  body * {
+    cursor: none !important;
+  }
+}
+
+/* Mobile: show default cursor */
+@media (pointer: coarse) {
+  html,
+  html *,
+  body,
+  body * {
+    cursor: auto !important;
+  }
 }
