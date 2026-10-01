@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { Analytics } from '@vercel/analytics/vue'
-import { APP_URL } from './constants'
+import { SITE_URL } from './constants'
 
 interface Frontmatter {
   title?: string
@@ -9,12 +9,12 @@ interface Frontmatter {
 
 const SITE_TITLE = 'Douglas Ochner - Senior Frontend Engineer'
 const SITE_DESCRIPTION = 'Senior Frontend Engineer specializing in Vue 3, Nuxt and TypeScript. 5+ years building scalable SaaS and health-tech apps. Remote from Portugal, open to US opportunities.'
-const OG_IMAGE = `${APP_URL}/og-icon.png`
+const OG_IMAGE = `${SITE_URL}/og-icon.png`
 
 const route = useRoute()
 
 const frontmatter = computed<Frontmatter>(() => (route.meta.frontmatter as Frontmatter | undefined) ?? {})
-const canonical = computed(() => `${APP_URL}${route.path === '/' ? '/' : route.path.replace(/\/$/, '')}`)
+const canonical = computed(() => `${SITE_URL}${route.path === '/' ? '/' : route.path.replace(/\/$/, '')}`)
 const pageTitle = computed(() => frontmatter.value.title?.trim() || SITE_TITLE)
 const pageDescription = computed(() => frontmatter.value.description?.trim() || SITE_DESCRIPTION)
 
@@ -23,8 +23,8 @@ const personSchema = JSON.stringify({
   '@type': 'Person',
   'name': 'Douglas Ochner',
   'jobTitle': 'Senior Frontend Engineer',
-  'url': APP_URL,
-  'image': `${APP_URL}/avatar.webp`,
+  'url': SITE_URL,
+  'image': `${SITE_URL}/avatar.webp`,
   'worksFor': { '@type': 'Organization', 'name': 'Sword Health' },
   'address': { '@type': 'PostalAddress', 'addressLocality': 'Lisbon', 'addressCountry': 'PT' },
   'knowsAbout': ['Vue.js', 'Nuxt', 'TypeScript', 'Tailwind CSS', 'UnoCSS', 'Design Systems', 'Frontend Architecture'],
