@@ -5,7 +5,7 @@
       to="/"
       focusable="false"
     >
-      <img  src="/avatar.webp?url" alt="logo">
+      <img src="/avatar.webp?url" alt="Douglas Ochner" width="40" height="40">
     </router-link>
     <nav class="nav">
       <div class="spacer" />
