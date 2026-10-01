@@ -1,0 +1,197 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/rss",
+      "destination": "https://ochner.com.br/feed.xml",
+      "permanent": false
+    },
+    {
+      "source": "/blog",
+      "destination": "https://ochner.com.br/posts",
+      "permanent": false
+    },
+    {
+      "source": "/github",
+      "destination": "https://github.com/dochner",
+      "permanent": false
+    },
+    {
+      "source": "/gh",
+      "destination": "https://github.com/dochner",
+      "permanent": false
+    },
+    {
+      "source": "/30days30sites",
+      "destination": "https://github.com/dochner/30days30sites",
+      "permanent": false
+    },
+    {
+      "source": "/cd-commerce",
+      "destination": "https://github.com/dochner/cd-commerce",
+      "permanent": false
+    },
+    {
+      "source": "/continente-tax-receipt-reader",
+      "destination": "https://github.com/dochner/continente-tax-receipt-reader",
+      "permanent": false
+    },
+    {
+      "source": "/d-store.ochner.com.br",
+      "destination": "https://github.com/dochner/d-store.ochner.com.br",
+      "permanent": false
+    },
+    {
+      "source": "/d-ui",
+      "destination": "https://github.com/dochner/d-ui",
+      "permanent": false
+    },
+    {
+      "source": "/dcommerce",
+      "destination": "https://github.com/dochner/dcommerce",
+      "permanent": false
+    },
+    {
+      "source": "/douglasochner.me",
+      "destination": "https://github.com/dochner/douglasochner.me",
+      "permanent": false
+    },
+    {
+      "source": "/fj21-agenda",
+      "destination": "https://github.com/dochner/fj21-agenda",
+      "permanent": false
+    },
+    {
+      "source": "/forum-app",
+      "destination": "https://github.com/dochner/forum-app",
+      "permanent": false
+    },
+    {
+      "source": "/Genetic-Algoritm",
+      "destination": "https://github.com/dochner/Genetic-Algoritm",
+      "permanent": false
+    },
+    {
+      "source": "/knowledge-base-api",
+      "destination": "https://github.com/dochner/knowledge-base-api",
+      "permanent": false
+    },
+    {
+      "source": "/messenger-x",
+      "destination": "https://github.com/dochner/messenger-x",
+      "permanent": false
+    },
+    {
+      "source": "/my-react-portfolio",
+      "destination": "https://github.com/dochner/my-react-portfolio",
+      "permanent": false
+    },
+    {
+      "source": "/nestjs-postgres-graphql",
+      "destination": "https://github.com/dochner/nestjs-postgres-graphql",
+      "permanent": false
+    },
+    {
+      "source": "/netflix-clone",
+      "destination": "https://github.com/dochner/netflix-clone",
+      "permanent": false
+    },
+    {
+      "source": "/nosso-banco-digital",
+      "destination": "https://github.com/dochner/nosso-banco-digital",
+      "permanent": false
+    },
+    {
+      "source": "/nuxt-starter-netlify-cms",
+      "destination": "https://github.com/dochner/nuxt-starter-netlify-cms",
+      "permanent": false
+    },
+    {
+      "source": "/nuxt3-tailwind-atomicdesign",
+      "destination": "https://github.com/dochner/nuxt3-tailwind-atomicdesign",
+      "permanent": false
+    },
+    {
+      "source": "/ochner-ui",
+      "destination": "https://github.com/dochner/ochner-ui",
+      "permanent": false
+    },
+    {
+      "source": "/ochner.com.br-nuxt",
+      "destination": "https://github.com/dochner/ochner.com.br-nuxt",
+      "permanent": false
+    },
+    {
+      "source": "/portfolio-tutorial",
+      "destination": "https://github.com/dochner/portfolio-tutorial",
+      "permanent": false
+    },
+    {
+      "source": "/qr-code-generator",
+      "destination": "https://github.com/dochner/qr-code-generator",
+      "permanent": false
+    },
+    {
+      "source": "/react-vite-template",
+      "destination": "https://github.com/dochner/react-vite-template",
+      "permanent": false
+    },
+    {
+      "source": "/secret-words",
+      "destination": "https://github.com/dochner/secret-words",
+      "permanent": false
+    },
+    {
+      "source": "/shop-web",
+      "destination": "https://github.com/dochner/shop-web",
+      "permanent": false
+    },
+    {
+      "source": "/slack-clone",
+      "destination": "https://github.com/dochner/slack-clone",
+      "permanent": false
+    },
+    {
+      "source": "/todo-app",
+      "destination": "https://github.com/dochner/todo-app",
+      "permanent": false
+    },
+    {
+      "source": "/todos",
+      "destination": "https://github.com/dochner/todos",
+      "permanent": false
+    },
+    {
+      "source": "/trello-clone",
+      "destination": "https://github.com/dochner/trello-clone",
+      "permanent": false
+    },
+    {
+      "source": "/vehicles",
+      "destination": "https://github.com/dochner/vehicles",
+      "permanent": false
+    },
+    {
+      "source": "/vivu-template",
+      "destination": "https://github.com/dochner/vivu-template",
+      "permanent": false
+    },
+    {
+      "source": "/vue3-vite-atomicdesign",
+      "destination": "https://github.com/dochner/vue3-vite-atomicdesign",
+      "permanent": false
+    },
+    {
+      "source": "/vuex-shopping-cart-backend",
+      "destination": "https://github.com/dochner/vuex-shopping-cart-backend",
+      "permanent": false
+    },
+    {
+      "source": "/website-angular",
+      "destination": "https://github.com/dochner/website-angular",
+      "permanent": false
+    }
+  ]
+}

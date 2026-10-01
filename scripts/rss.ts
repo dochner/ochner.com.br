@@ -6,7 +6,7 @@ import MarkdownIt from 'markdown-it'
 import type { FeedOptions, Item } from 'feed'
 import { Feed } from 'feed'
 
-const DOMAIN = 'htts://ochner.com.br'
+const DOMAIN = 'https://ochner.com.br'
 const AUTHOR = {
   name: 'Douglas Ochner',
   email: 'douglas.ochner@gmail.com',
@@ -27,10 +27,10 @@ async function buildBlogRSS() {
 
   const options = {
     title: 'Douglas Ochner',
-    description: 'Douglas Ochner\' Blog',
+    description: "Douglas Ochner's Blog",
     id: DOMAIN,
     link: DOMAIN,
-    copyright: 'CC BY-NC-SA 4.0 2021 © Douglas Ochner',
+    copyright: 'CC BY-NC-SA 4.0 2020-PRESENT © Douglas Ochner',
     feedLinks: {
       json: `${DOMAIN}/feed.json`,
       atom: `${DOMAIN}/feed.atom`,

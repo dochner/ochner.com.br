@@ -1,5 +1,5 @@
 ---
-title: 
+title: Douglas Ochner - Senior Frontend Engineer | Vue.js & TypeScript
 ---
 
 <div class="hero-section">
@@ -79,6 +79,6 @@ Currently based in **Lisbon, Portugal** with **legal authorization to work remot
 If you wanna get in touch, talk to me about a project
 collaboration or just say hi:
 
-[<span i-mdi-linkedin /> in/douglasochner](https://linkedin.in/douglasochner)
+[<span i-mdi-linkedin /> in/douglasochner](https://www.linkedin.com/in/douglasochner)
 
 [<span i-mdi-email /> douglas.ochner@gmail.com](mailto:douglas.ochner@gmail.com)
